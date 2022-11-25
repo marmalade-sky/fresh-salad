@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {}
+
+  @font-face {
+    font-family: "Circular-400";
+    src: local("Circular-400"),
+      url("../assets/fonts/circular-400.woff2") format("woff2") tech(color-COLRv1);
+  }
+  @font-face {
+    font-family: "Circular-700";
+    src: local("Circular-700"),
+      url("../assets/fonts/circular-700.woff2") format("woff2") tech(color-COLRv1);
+  }
+
+  body {
+    @apply font-book text-sm text-gray-700;
+  }
+}

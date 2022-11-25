@@ -1,0 +1,20 @@
+<nav class="flex justify-between border-b">
+  <div class="flex items-center px-6 py-4 gap-4 xl:px-8 xl:gap-8">
+    {%- from 'macros/logo.njk' import logo %}
+    {{ logo({text: "h-[40px] xl:h-[60px]"}) }} 
+    <p>
+      <a href="#">Menu</a>
+    </p>
+  </div>
+  <input type="text" class="hidden xl:grow xl:border-x xl:px-6 xl:py-4" placeholder="What kind of talent or service can we help you find?">
+  <div class="flex items-center gap-6 px-6 py-4 xl:gap-8">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 xl:w-6 xl:h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 xl:w-6 xl:h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+    </svg>
+    <a href="#" class="hidden xl:block">Log In</a>
+    <a href="#" class="hidden xl:bg-blue-500 xl:text-slate-50 xl:font-heavy xl:px-6 xl:py-3 xl:rounded">List your services</a>
+  </div>
+</nav>
