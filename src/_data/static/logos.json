@@ -1,0 +1,62 @@
+[
+  {
+    "company": "Apple",
+    "image": "Apple.svg",
+    "orientation": "vertical"
+  },
+  {
+    "company": "Microsoft",
+    "image": "Microsoft.svg",
+    "orientation": "horizontal"
+  },
+  {
+    "company": "Whole Foods",
+    "image": "WholeFoods.svg",
+    "orientation": "vertical"
+  },
+  {
+    "company": "Macy's",
+    "image": "Macys.svg",
+    "orientation": "horizontal"
+  },
+  {
+    "company": "LinkedIn",
+    "image": "Linkedin.svg",
+    "orientation": "horizontal"
+  },
+  {
+    "company": "Mariott",
+    "image": "Mariott.svg",
+    "orientation": "vertical"
+  },
+  {
+    "company": "Nike",
+    "image": "Nike.svg",
+    "orientation": "horizontal"
+  },
+  {
+    "company": "McDonalds",
+    "image": "McDonalds.svg",
+    "orientation": "vertical"
+  },
+  {
+    "company": "Uber",
+    "image": "Uber.svg",
+    "orientation": "horizontal"
+  },
+  {
+    "company": "Costco",
+    "image": "Costco.svg",
+    "orientation": "horizontal"
+  },
+  {
+    "company": "Salesforce",
+    "image": "Salesforce.svg",
+    "orientation": "vertical"
+  },
+  {
+    "company": "Lulumon",
+    "image": "Lulumon.svg",
+    "orientation": "vertical"
+  }
+]

@@ -1,0 +1,19 @@
+<section class="relative flex justify-center bg-blue-50 p-8 lg:py-32 xl:px-20">
+  <div class="grid space-y-8 lg:max-w-site lg:space-y-12">
+    <div class="space-y-6 lg:w-3/4 lg:justify-self-center">
+      <h2 class="font-heavy text-headline text-center leading-9">Our values</h2>
+      <p class="text-lg">Our values are the foundation of our culture here at GigSalad. They guide everything we do for our clients and employees, informing our decisions, planning, and actions. We recognize that a strong company culture is essential to the success of our business.</p>
+    </div>
+    <div class="grid grid-col-1 space-y-6 md:grid-cols-2 lg:grid-cols-3">
+      {% for value in static.values %}
+        <div class="space-y-2">
+          <div class="flex gap-2 items-center">
+            {% svgsprite %}
+            <h3 class="font-heavy text-lg">{{value.title}}</h3>
+          </div>
+          <p class="text-base">{{value.description}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
