@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./src/**/*.{njk,md}'],
+  content: ['./src/**/*.{njk,md,json}'],
   theme: {
     fontFamily: {
       'book': ['Circular-400', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],

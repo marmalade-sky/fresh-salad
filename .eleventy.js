@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("imgSrc", "/assets/img/");
 
   eleventyConfig.addPlugin(svgSprite, {
-    path: "./src/assets/svg"
+    path: "./src/assets/svg/icons"
   });
 
   return {

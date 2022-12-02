@@ -2,46 +2,55 @@
   {
     "title": "Realistic expectations",
     "description": "Ambition is great, but over-promising is not. We strike this balance with setting ambitious goals that are rooted in reality.",
-    "icon": "gift.svg"
+    "icon": "gift",
+    "color": "fill-orange-500"
   },
   {
     "title": "Craft exceptional experiences",
     "description": "We don't just build solutions, we make the experience one people come back to time and time again.",
-    "icon": "smile.svg"
+    "icon": "smile",
+    "color": "fill-blue-500"
   },
   {
     "title": "Listen intently",
     "description": "Everyone has something to say, and it's our job to listen, whether it's coming from the customer or your teammates.",
-    "icon": "lightbulb.svg"
+    "icon": "lightbulb",
+    "color": "fill-amber-500"
   },
   {
     "title": "Travel the high road",
     "description": "We choose to travel the paths of that yield the most positive outcomes, especially in the face of criticism and adversity.",
-    "icon": "map.svg"
+    "icon": "map",
+    "color": "fill-blue-700"
   },
   {
     "title": "Make life better",
     "description": "Find solutions to make people’s lives more enjoyable with as little intrusion possible. We went to enhance life, not dominate it.",
-    "icon": "sparkle.svg"
+    "icon": "sparkle",
+    "color": "fill-amber-500"
   },
   {
     "title": "The right way, not the easy way",
     "description": "We thrive when doing the right thing. Cutting corners, or rushing through problems doesn’t end well. Work smarter, not harder.",
-    "icon": "bolt.svg"
+    "icon": "bolt",
+    "color": "fill-pink-500"
   },
   {
     "title": "Go the extra mile",
     "description": "Moving beyond bare-bones necessity means putting special effort in to deliver the best possible outcome. ",
-    "icon": "fire.svg"
+    "icon": "fire",
+    "color": "fill-orange-500"
   },
   {
     "title": "Take calculated risks",
     "description": "The backbone of innovation is risk, but one that involves careful consideration of the potential reward-to-failure ratio.",
-    "icon": "rocket.svg"
+    "icon": "rocket",
+    "color": "fill-rose-500"
   },
   {
     "title": "Rise above mediocrity",
     "description": "Motivate others to live up to their full potential. When supporting one another, great things are made.",
-    "icon": "trophy.svg"
+    "icon": "trophy",
+    "color": "fill-amber-500"
   }
 ]

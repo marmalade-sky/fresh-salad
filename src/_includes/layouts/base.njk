@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
     <title>{{ title }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,8 +12,9 @@
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
+    {% svgsprite %}
     {% include "partials/nav.njk" %}
-    <main id="Main">
+    <main id="Main"> 
       {{content | safe}}
     </main>
     {% include "partials/footer.njk" %}

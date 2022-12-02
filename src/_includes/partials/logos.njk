@@ -1,17 +1,15 @@
-<section class="relative flex justify-center bg-blue-50 p-8 lg:py-32 xl:px-20">
-  <div class="grid items-center space-y-8 lg:grid-cols-[2fr_1fr] lg:max-w-site lg:gap-16 lg:space-y-0">
-    <div class="space-y-3 lg:order-2">
-      <h2 class="font-heavy text-headline leading-9">Millions trust <span class="text-blue-500">GigSalad</span> to electrify their events.</h2>
-      <p class="text-lg lg:text-base">Some of the biggest names use GigSalad to delight guests at their events. Whether it's a magician at cocktail hour, a DJ for a corporate party, or a birthday carnival extravaganza, every event booked is guaranteed to spark adventure and excitement for everyone.</p>
-      <p class="text-lg lg:text-base">Every event is different. Big or small, intimate or formal, we offer a wide range of talent and services to fit most budgets.</p>
-      <p class="font-heavy text-lg lg:text-base">Check out what people think of us on TrustPilot and Sitejabber!</p>
-    </div>
-    <div class="grid gap-1 grid-cols-2 md:grid-cols-3">
-      {% for logo in static.logos %}
-        <div class="flex items-center justify-center bg-white p-9 rounded">
-          <img src="{{svgSrc}}logos/{{logo.image}}" alt="{{logo.company}}" class="{{'max-h-6' if logo.orientation == 'horizontal' else 'max-h-10'}}"/>
-        </div>
-      {% endfor %}
-    </div>  
+<div class="grid items-center space-y-8 lg:grid-cols-[2fr_1fr] lg:max-w-site lg:gap-16 lg:space-y-0">
+  <div class="space-y-3 lg:order-2">
+    <h2 class="font-heavy text-headline leading-9">Millions trust <span class="text-blue-500">GigSalad</span> to electrify their events.</h2>
+    <p class="text-lg lg:text-base">Some of the biggest names use GigSalad to delight guests at their events. Whether it's a magician at cocktail hour, a DJ for a corporate party, or a birthday carnival extravaganza, every event booked is guaranteed to spark adventure and excitement for everyone.</p>
+    <p class="text-lg lg:text-base">Every event is different. Big or small, intimate or formal, we offer a wide range of talent and services to fit most budgets.</p>
+    <p class="font-heavy text-lg lg:text-base">Check out what people think of us on TrustPilot and Sitejabber!</p>
   </div>
-</section>
+  <div class="grid gap-1 grid-cols-2 md:grid-cols-3">
+    {% for logo in static.logos %}
+      <div class="flex items-center justify-center bg-white p-9 rounded">
+        <img src="{{svgSrc}}logos/{{logo.image}}" alt="{{logo.company}}" class="{{'max-h-6' if logo.orientation == 'horizontal' else 'max-h-10'}}"/>
+      </div>
+    {% endfor %}
+  </div>  
+</div>
