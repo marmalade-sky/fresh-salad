@@ -19,4 +19,30 @@
   body {
     @apply font-book text-sm text-gray-700;
   }
+
+  .bio.is-active {
+    @apply z-10;
+  }
+
+  .bio.is-active ~ .overlay {
+    @apply block;
+  }
+
+  .bio > .info {
+    @apply invisible left-full opacity-0 transition-all duration-500;
+  }
+
+  .bio:nth-child(5n+3) > .info,
+  .bio:nth-child(5n+4) > .info,
+  .bio:nth-child(5n+5) > .info {
+    @apply right-full left-auto;
+  }
+
+  .bio.is-active > .info {
+    @apply visible opacity-100 -translate-y-2
+  }
+}
+
+.modal-active {
+  overflow: hidden;
 }

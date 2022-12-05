@@ -1,0 +1,49 @@
+<div class="team grid space-y-8 lg:max-w-site lg:space-y-12">
+  <div class="space-y-6 lg:w-3/4 lg:justify-self-center">
+    <h2 class="font-heavy text-headline text-blue-50 text-center leading-9">Our values</h2>
+    <p class="text-lg text-blue-50">Our values are the foundation of our culture here at GigSalad. They guide everything we do for our clients and employees, informing our decisions, planning, and actions. We recognize that a strong company culture is essential to the success of our business.</p>
+  </div>
+  <div class="grid grid-cols-5">
+    {% for person in collections.team %}
+      <div class="bio relative p-8 items-center cursor-pointer">
+        <div class="snapshot relative flex flex-col gap-4">        
+          <img src="{{imgSrc}}team/{{person.data.img}}" alt="{{person.data.name}} - {{person.data.role}}" class="p-1 rounded-full border border-dashed border-blue-300">
+          <div class="flex flex-col items-center space-y">
+            <h3 class="font-heavy text-lg text-blue-50 text-center">{{person.data.name}}</h3>
+            <p class="text-xs text-blue-300 text-center">{{person.data.role}}</p>
+          </div>
+        </div>
+        <div class="info w-[100%] absolute top-0 bg-blue-800 p-8 rounded space-y-6 shadow-lg overflow-hidden lg:w-[200%]">
+          <div class="h-64 w-full bg-pink-500"></div>
+          {# <div class="flex justify-center">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full">
+              <clipPath id="imgClip-{{person.fileSlug}}">
+                <path fill="#FF0066" d="M46.3,-80.7C60.3,-72.2,71.9,-60.2,80,-46.2C88.1,-32.2,92.7,-16.1,91.7,-0.5C90.8,15,84.3,30,76.1,43.8C67.8,57.5,57.7,70,44.8,78.7C31.8,87.4,15.9,92.3,-0.3,92.8C-16.4,93.2,-32.8,89.2,-45.9,80.6C-59.1,72,-69.1,58.8,-77.4,44.6C-85.6,30.4,-92.2,15.2,-92.6,-0.2C-93,-15.7,-87.3,-31.4,-78.2,-44.1C-69.1,-56.9,-56.6,-66.7,-43.1,-75.4C-29.5,-84.1,-14.7,-91.7,0.7,-93C16.2,-94.2,32.4,-89.2,46.3,-80.7Z" transform="translate(100 100)" />
+              </clipPath>
+              <image width="100%" clip-path="url(#imgClip-{{person.fileSlug}})"  xlink:href="https://images.pexels.com/photos/7061539/pexels-photo-7061539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></image>
+            </svg>
+          </div> #}
+          <p class="text-lg text-blue-50">
+            {{person.templateContent | striptags}}
+          </p>
+          <ul class="space-y-2">
+            <li class="text-sm text-blue-200">
+              <span class="font-heavy">Origin:</span>
+              <span>{{person.data.origin}}</span>
+            </li>
+            <li class="text-sm text-blue-200">
+              <span class="font-heavy">Talents:</span>
+              <span>{{person.data.talents}}</span>
+            </li>
+            <li class="text-sm text-blue-200">
+              <span class="font-heavy">Inspiration:</span>
+              <span>{{person.data.inspiration}}</span>
+            </li>
+          </ul>
+          <p class="close text-blue-200 mt-6">Close</p>
+        </div>  
+      </div>
+    {% endfor %}
+    <div class="overlay hidden fixed top-0 bottom-0 left-0 right-0 bg-slate-900 opacity-80"></div>
+  </div>
+</div>
