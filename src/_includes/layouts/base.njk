@@ -20,6 +20,10 @@
       {{content | safe}}
     </main>
     {% include "partials/footer.njk" %}
-    <script src="/js/row-overlay.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.snapshot', {distance: '5px', delay: 100, duration: 1000, origin: 'bottom', interval: 10});
+    </script>
+    <script src="/js/circle-layout.js"></script>
   </body>
 </html>

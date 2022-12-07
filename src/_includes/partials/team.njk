@@ -1,49 +1,57 @@
 <div class="team grid space-y-8 lg:max-w-site lg:space-y-12">
-  <div class="space-y-6 lg:w-3/4 lg:justify-self-center">
+  <div class="space-y-6 lg:w-3/4 lg:justify-self-center" data-josh-anim-name="fadeInUp">
     <h2 class="font-heavy text-headline text-blue-50 text-center leading-9">Our values</h2>
     <p class="text-lg text-blue-50">Our values are the foundation of our culture here at GigSalad. They guide everything we do for our clients and employees, informing our decisions, planning, and actions. We recognize that a strong company culture is essential to the success of our business.</p>
   </div>
-  <div class="grid grid-cols-5">
+  <div class="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
     {% for person in collections.team %}
-      <div class="bio relative p-8 items-center cursor-pointer">
-        <div class="snapshot relative flex flex-col gap-4">        
+      <div class="employee p-8 items-center">
+        <div class="snapshot flex flex-col gap-4">        
           <img src="{{imgSrc}}team/{{person.data.img}}" alt="{{person.data.name}} - {{person.data.role}}" class="p-1 rounded-full border border-dashed border-blue-300">
           <div class="flex flex-col items-center space-y">
             <h3 class="font-heavy text-lg text-blue-50 text-center">{{person.data.name}}</h3>
             <p class="text-xs text-blue-300 text-center">{{person.data.role}}</p>
           </div>
         </div>
-        <div class="info w-[100%] absolute top-0 bg-blue-800 p-8 rounded space-y-6 shadow-lg overflow-hidden lg:w-[200%]">
-          <div class="h-64 w-full bg-pink-500"></div>
-          {# <div class="flex justify-center">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full">
-              <clipPath id="imgClip-{{person.fileSlug}}">
-                <path fill="#FF0066" d="M46.3,-80.7C60.3,-72.2,71.9,-60.2,80,-46.2C88.1,-32.2,92.7,-16.1,91.7,-0.5C90.8,15,84.3,30,76.1,43.8C67.8,57.5,57.7,70,44.8,78.7C31.8,87.4,15.9,92.3,-0.3,92.8C-16.4,93.2,-32.8,89.2,-45.9,80.6C-59.1,72,-69.1,58.8,-77.4,44.6C-85.6,30.4,-92.2,15.2,-92.6,-0.2C-93,-15.7,-87.3,-31.4,-78.2,-44.1C-69.1,-56.9,-56.6,-66.7,-43.1,-75.4C-29.5,-84.1,-14.7,-91.7,0.7,-93C16.2,-94.2,32.4,-89.2,46.3,-80.7Z" transform="translate(100 100)" />
-              </clipPath>
-              <image width="100%" clip-path="url(#imgClip-{{person.fileSlug}})"  xlink:href="https://images.pexels.com/photos/7061539/pexels-photo-7061539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></image>
-            </svg>
-          </div> #}
-          <p class="text-lg text-blue-50">
-            {{person.templateContent | striptags}}
-          </p>
-          <ul class="space-y-2">
-            <li class="text-sm text-blue-200">
-              <span class="font-heavy">Origin:</span>
-              <span>{{person.data.origin}}</span>
-            </li>
-            <li class="text-sm text-blue-200">
-              <span class="font-heavy">Talents:</span>
-              <span>{{person.data.talents}}</span>
-            </li>
-            <li class="text-sm text-blue-200">
-              <span class="font-heavy">Inspiration:</span>
-              <span>{{person.data.inspiration}}</span>
-            </li>
-          </ul>
-          <p class="close text-blue-200 mt-6">Close</p>
+        <div class="info w-full h-full fixed top-0 left-0 bg-blue-800/95 z-10 invisible">
+          <div class="absolute w-full h-full top-0 left-0 flex items-center justify-center overflow-auto">
+            <div class="w-7/12 max-w-2lg flex flex-col items-center space-y-6">
+              <div class="w-[264px] h-[264px] relative">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 480 480" class="blob w-[335px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 anim-outline">
+                  <path class="path fill-transparent stroke-blue-50 stroke-2" d="M118.6,434.2c-21-12.2-32.6-34.5-34.3-66.4c-2.2-41.6-13-80.6-31.9-116.2c-20.2-37.9-15.9-76.5,12.7-114.8 C93.2,99.2,127,77.4,165.6,72.1c37.1-5.1,72.4-11.7,105-19.5c33.3-8,70.8-7.6,111.5,1.1c10.7,2.3,20.4,5.9,28.7,10.7 c24.1,13.9,38.2,38.6,41.8,73.4c4.9,46.5-8.7,87.7-40.3,122.2c-30,32.8-53.5,67.2-69.9,102.3c-17.3,37.1-45.1,61.8-82.6,73.4 c-36.6,11.3-74.4,14-112.5,8.2C136.3,442.1,126.7,438.9,118.6,434.2z"/>
+                  <path class="fill-pink-500" d="M338.5,360.6c-16.7,35.8-43.1,59.2-79.3,70.4s-73,13.8-110.7,8.1c-37.6-5.7-57.6-29.8-59.9-72.3 c-2.3-42.4-13.1-81.8-32.4-118s-15.3-72.7,12-109.2S128,82,165.4,76.8c37.4-5.2,72.6-11.7,105.4-19.6s69.4-7.5,109.7,1.1 s62.9,35.5,67.6,80.6c4.7,45.1-8.2,84.4-38.7,117.8S355.2,324.8,338.5,360.6z"/>
+                </svg>
+                <img src="{{imgSrc}}team/{{person.data.funimg}}" alt="{{person.data.name}} having fun!" class="relative rounded-full shadow-lg overflow-hidden anim-rise">
+              </div>
+              <div class="space-y-6 anim-rise">
+                <div class="space-y">
+                  <h3 class="font-heavy text-2xl text-blue-50">{{person.data.name}}</h3>
+                  <p class="text-base text-blue-300">{{person.data.role}}</p>
+                </div>
+                <p class="text-lg text-blue-50">
+                  {{person.templateContent | striptags}}
+                </p>
+                <ul class="space-y-1">
+                  <li class="text-sm text-blue-50">
+                    <span class="font-heavy">Origin:</span>
+                    <span>{{person.data.origin}}</span>
+                  </li>
+                  <li class="text-sm text-blue-50">
+                    <span class="font-heavy">Talents:</span>
+                    <span>{{person.data.talents}}</span>
+                  </li>
+                  <li class="text-sm text-blue-50">
+                    <span class="font-heavy">Inspiration:</span>
+                    <span>{{person.data.inspiration}}</span>
+                  </li>
+                </ul>
+                <p class="close text-lg text-blue-200 mt-6 cursor-pointer">TEMP CLOSE ACTION</p>
+              </div>
+            </div>
+          </div>
+          
         </div>  
       </div>
     {% endfor %}
-    <div class="overlay hidden fixed top-0 bottom-0 left-0 right-0 bg-slate-900 opacity-80"></div>
   </div>
 </div>

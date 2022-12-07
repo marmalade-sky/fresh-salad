@@ -1,6 +1,10 @@
 const svgSprite = require("eleventy-plugin-svg-sprite");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(svgSprite, {
+    path: "./src/assets/svg/icons"
+  });
+
   eleventyConfig.addPassthroughCopy('./src/assets/');
   eleventyConfig.addPassthroughCopy('./src/js/');
 
@@ -9,10 +13,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addGlobalData("svgSrc", "/assets/svg/");
   eleventyConfig.addGlobalData("imgSrc", "/assets/img/");
-
-  eleventyConfig.addPlugin(svgSprite, {
-    path: "./src/assets/svg/icons"
-  });
 
   return {
     dir: {
