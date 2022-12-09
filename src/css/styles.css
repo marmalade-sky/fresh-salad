@@ -16,20 +16,20 @@
       url("../assets/fonts/circular-700.woff2") format("woff2") tech(color-COLRv1);
   }
 
+  html {
+    @apply w-full;
+  }
+
   body {
     @apply font-book text-sm text-gray-700;
   }
 
   .info {
-    @apply transition-opacity opacity-0;
+    @apply invisible opacity-0 transition-fade duration-300 delay-fade;
   }
 
   .info.is-active {
-    @apply visible opacity-100;
-  }
-
-  .info.is-active .anim-rise {
-    @apply animate-rise;
+    @apply visible opacity-100 delay-0;
   }
 
   .info .anim-outline .path {
@@ -37,4 +37,8 @@
     stroke-dashoffset: 0;
     @apply animate-outline;
   }
+}
+
+html.modal-open {
+  overflow: hidden;
 }

@@ -17,28 +17,25 @@ module.exports = {
       maxWidth: {
         'site': '1184px'
       },
+      transitionProperty: {
+        'fade': 'visibility, opacity'
+      },
+      transitionDelay: {
+        '0': '0ms',
+        'fade': '0ms, 5ms'
+      },
       animation: {
-        'rise': 'rise 750ms cubic-bezier(0.68, 0.04, 0.24, 1)',
-        'outline' : 'outlinePath 20s linear infinite'
+        'outline' : 'outlinePath 20s linear infinite',
+        'fade': 'fade 500ms linear'
       },
       keyframes: {
-        rise: {
-          '0%': { 
-            opacity: 0,
-            transform: 'translateX(-10px)'
-          },
-          '100': {
-            opacity: 1,
-            transform: 'translateX(0px)'
-          },
+        fade: {
+          '0%': { 'opacity': 0 },
+          '100': { 'opacity': 1 }
         },
         outlinePath: {
-          '0%': { 
-            'stroke-dashoffset': 750
-          },
-          '100': {
-            'stroke-dashoffset': 0
-          }
+          '0%': { 'stroke-dashoffset': 750 },
+          '100': {'stroke-dashoffset': 0 }
         } 
       },
     },
@@ -46,5 +43,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/line-clamp'),
+    require("tailwindcss-animation-delay"),
   ],
 }
